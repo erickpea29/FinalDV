@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Scenes_BackGrounds/Room.jpeg" type="Texture" id=2]
+
+
+
+[node name="Room_Scene" type="Node2D"]
+
+[node name="Room_BackGround" type="Sprite" parent="."]
+position = Vector2( 510.753, 304.738 )
+texture = ExtResource( 2 )
+
+[node name="Room_Objects" type="StaticBody2D" parent="."]
+position = Vector2( 511.826, 302 )
+scale = Vector2( 0.973275, 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room_Objects"]
+position = Vector2( -525.88, -302 )
+scale = Vector2( 1.02746, 1 )
+polygon = PoolVector2Array( 195.487, 443.283, 195.487, 463.171, 196.055, 483.013, 312.27, 483.131, 312.27, 472.985, 321.826, 473.221, 322.313, 522.89, 341.117, 522.89, 341.117, 513.31, 380.678, 513.31, 380.501, 603.254, 380.206, 599.668, 644.159, 599.983, 643.25, 563.25, 632.5, 563.5, 633.75, 513, 662.5, 513, 662.5, 453.75, 672.5, 454.25, 672.5, 443.25, 691.75, 443.5, 692, 453.25, 701.75, 453, 701.75, 474, 720.5, 473.5, 721.25, 483.5, 857.75, 483.25, 857.5, 443, 886.5, 443.25, 886.75, 433, 906, 433.25, 906, 412.75, 915.75, 413, 915.427, 442.559, 935.695, 443.004, 935.473, 432.982, 954.404, 433.427, 954.627, 383.314, 1023.47, 424.445, 1023.94, 604.254, 0.783127, 602.838, 1.727, 451.818, 1.25507, 448.514 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Room_Objects"]
+position = Vector2( -525.88, -302 )
+scale = Vector2( 1.02746, 1 )
+polygon = PoolVector2Array( 313.616, 221.781, 342.168, 222.96, 341.932, 203.375, 496.511, 203.416, 496.956, 223.462, 526.356, 223.907, 526.802, 202.526, 594.518, 202.693, 595.113, 221.72, 896.547, 222.312, 895.385, 112.451, 294.12, 111.088, 233.722, 110.956, 235.39, 211.736, 311.476, 212.07, 312.811, 212.07 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Room_Objects"]
+position = Vector2( 0, 1.12201 )
+polygon = PoolVector2Array( -345.169, 139.024, -345.984, 130.293, -333.752, 129.896, -335.383, -92.34, -284.007, -92.34, -344.761, -104.642 )
