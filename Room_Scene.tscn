@@ -1,6 +1,5 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Main_Character_Animation.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Room.jpeg" type="Texture" id=2]
 
 [node name="Node2D" type="Node2D"]
@@ -25,8 +24,4 @@ polygon = PoolVector2Array( 313.616, 221.781, 342.168, 222.96, 341.932, 203.375,
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Room_Objects"]
 position = Vector2( 0, 1.12201 )
-scale = Vector2( 1, 1 )
 polygon = PoolVector2Array( -345.169, 139.024, -345.984, 130.293, -333.752, 129.896, -335.383, -92.34, -284.007, -92.34, -344.761, -104.642 )
-
-[node name="Main_Character_Animation" parent="." instance=ExtResource( 1 )]
-position = Vector2( 452.577, 308.251 )
