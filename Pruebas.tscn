@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Main_Character_Animation.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Room_Scene.tscn" type="PackedScene" id=2]
+
+[node name="Pruebas" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+
+[node name="Main_Character_Animation" parent="." instance=ExtResource( 1 )]
+position = Vector2( 484.649, 390.214 )
