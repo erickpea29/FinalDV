@@ -20,7 +20,7 @@ extents = Vector2( 519.156, 7.94287 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 3.51978, 285.957 )
 
-[node name="Area2D" type="Node2D"]
+[node name="Kitchen_Scene" type="Node2D"]
 
 [node name="Kitchen" type="Sprite" parent="."]
 position = Vector2( 515.767, 301.497 )
