@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Characters/Main_Character_Animation.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Scenes_BackGrounds/Hall_BackGround.jpeg" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 573.259, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 530.219, 11.1581 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512.175, 298.844 )
+scale = Vector2( 0.799929, 1.64359 )
+texture = ExtResource( 2 )
+
+[node name="Main_Character_Animation" parent="." instance=ExtResource( 1 )]
+position = Vector2( 89.9426, 418.599 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 508.082, 608.467 )
+shape = SubResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 519.088, 283.482 )
+shape = SubResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( 5.82709, -185.936 )
+polygon = PoolVector2Array( 993.885, 451.497, 1023.02, 572.276, 1019.38, 784.539, 1017.97, 566.75, 923.431, 481.692 )
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( -2799.13, -73.1032 )
+scale = Vector2( 20.1212, 1 )
+polygon = PoolVector2Array( 147.176, 378.471, 147.176, 411.174, 139.5, 410, 141.5, 376.5 )
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( 1.54691, 594.251, 6.79099, 356.02, 33.7605, 350.027, 96.6894, 305.078, 0.0486145, 305.078 )

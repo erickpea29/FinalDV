@@ -2,8 +2,6 @@
 
 [ext_resource path="res://Assets/Scenes_BackGrounds/Room.jpeg" type="Texture" id=2]
 
-
-
 [node name="Room_Scene" type="Node2D"]
 
 [node name="Room_BackGround" type="Sprite" parent="."]
