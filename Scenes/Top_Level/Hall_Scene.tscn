@@ -1,15 +1,10 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Assets/Scenes_BackGrounds/Entry_BackGround.jpeg" type="Texture" id=1]
+[ext_resource path="res://Assets/Scenes_BackGrounds/Hall_BackGround.jpeg" type="Texture" id=1]
 
-
-
-[node name="Hall_Scene" type="Area2D"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 523.145, 300 )
+[node name="Hall_Scene" type="Node2D"]
 
 [node name="Hall_BackGround" type="Sprite" parent="."]
-position = Vector2( 517.337, 105.552 )
-scale = Vector2( 0.98224, 1.6104 )
+position = Vector2( 510.193, 301.596 )
+scale = Vector2( 0.799937, 1.63215 )
 texture = ExtResource( 1 )
