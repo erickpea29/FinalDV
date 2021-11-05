@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Scenes_BackGrounds/Entry_BackGround.jpeg" type="Texture" id=1]
-
-
+[ext_resource path="res://Scenes/Characters/Main_Character_Animation.tscn" type="PackedScene" id=2]
 
 [sub_resource type="LineShape2D" id=1]
 normal = Vector2( 0.999985, 0.00549942 )
@@ -63,3 +62,6 @@ shape = SubResource( 6 )
 [node name="Right_Wall" type="CollisionPolygon2D" parent="Entry_Objects"]
 rotation = 0.0208269
 polygon = PoolVector2Array( 937.023, 293.677, 1023.02, 324.347, 1031.31, 570.274, 1078.36, 275.164, 1025.04, 282.148 )
+
+[node name="Main_Character_Animation" parent="." instance=ExtResource( 2 )]
+position = Vector2( 263.786, 369.716 )
