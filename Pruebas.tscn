@@ -6,7 +6,7 @@
 [node name="Pruebas" type="Node2D"]
 
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 987.292, 522.906 )
+position = Vector2( 882.64, 491.793 )
 
 [node name="Main_Character_Animation" parent="." instance=ExtResource( 1 )]
 position = Vector2( 30.204, 471.937 )
