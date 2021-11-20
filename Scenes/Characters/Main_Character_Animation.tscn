@@ -25,7 +25,7 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 14.2561
-height = 175.838
+height = 170.791
 
 [node name="Main_Character_Animation" type="KinematicBody2D"]
 script = ExtResource( 9 )
@@ -36,5 +36,6 @@ animation = "Main_Character_Idle"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 4.12262, 28.5418 )
+position = Vector2( 4.91632, 26.1607 )
+rotation = 0.0255716
 shape = SubResource( 2 )
