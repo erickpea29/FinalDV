@@ -12,14 +12,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Main_Character_Walking",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 4 ) ],
 "loop": false,
 "name": "Main_Character_Idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Main_Character_Walking",
 "speed": 8.0
 } ]
 
@@ -28,6 +28,8 @@ radius = 14.2561
 height = 170.791
 
 [node name="Main_Character_Animation" type="KinematicBody2D"]
+collision_layer = 2
+collision_mask = 257
 script = ExtResource( 9 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

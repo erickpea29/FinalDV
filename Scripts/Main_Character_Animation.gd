@@ -4,6 +4,9 @@ var velocidad = 250 #Velocidad del personaje
 var movimiento = Vector2() #Vector de movimiento de la velocidad
 var con_slide = true #Variable para cambiar entre move_and_slide() y move_and_collide()
 
+func _ready():
+	self.global_position = Global.player_initial_map_position
+
 func get_input():
 	movimiento = Vector2()
 	if Input.is_action_pressed('ui_right'):

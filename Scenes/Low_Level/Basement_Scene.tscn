@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Scenes_BackGrounds/Basement_Background.jpeg" type="Texture" id=1]
 [ext_resource path="res://Scenes/Characters/Main_Character_Animation.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 526.499, 12.0632 )
@@ -76,3 +77,11 @@ polygon = PoolVector2Array( 309.742, 362.009, 139.881, 362.009, 142.403, 525.983
 
 [node name="Obj_10" type="CollisionPolygon2D" parent="StaticBody2D"]
 polygon = PoolVector2Array( 876.493, 321.242, 1022.93, 465.02, 963.428, 287.224 )
+
+[node name="Main_Character_Animation2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 492.556, 420.474 )
+
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( -348.393, -220.249 )
+next_scene_path = "res://Scenes/Low_Level/Kitchen_Scene.tscn"
+player_spawn_location = Vector2( 685, 305 )

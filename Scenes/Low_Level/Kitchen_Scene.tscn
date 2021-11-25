@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Scenes_BackGrounds/Kitchen.jpeg" type="Texture" id=1]
 [ext_resource path="res://Scenes/Characters/Main_Character_Animation.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4.12636, 221.866 )
@@ -71,4 +72,14 @@ position = Vector2( 514.774, 19.799 )
 shape = SubResource( 6 )
 
 [node name="Main_Character_Animation" parent="." instance=ExtResource( 2 )]
-position = Vector2( 653.92, 379.523 )
+position = Vector2( 685.956, 306.107 )
+
+[node name="Portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 122.805, -72.0813 )
+next_scene_path = "res://Scenes/Low_Level/Entry_Scene.tscn"
+player_spawn_location = Vector2( 54, 368 )
+
+[node name="Portal2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -153.507, -250.95 )
+next_scene_path = "res://Scenes/Low_Level/Basement_Scene.tscn"
+player_spawn_location = Vector2( 492, 420 )

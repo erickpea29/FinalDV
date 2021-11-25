@@ -1,12 +1,14 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Scenes_BackGrounds/Exterior_MenuBackgGround.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Game_Intro/df967599a9c79164322413b7cfe51598.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Game_Intro/83d5e9f608d3d3d169cab2d883067455.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Game_Intro/Menu.gd" type="Script" id=4]
 
 [sub_resource type="AnimatedTexture" id=1]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="Exterior_MenuBackgGround" type="Sprite" parent="."]
 position = Vector2( 509.952, 326.348 )
@@ -53,3 +55,5 @@ text = "Instructions"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
