@@ -8,14 +8,14 @@
 [ext_resource path="res://Assets/Fonts/Alkhemikal.ttf" type="DynamicFontData" id=6]
 [ext_resource path="res://Assets/Audio/house_openSound_mp3cut.net.ogg" type="AudioStream" id=7]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 32
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 3
 font_data = ExtResource( 6 )
 
-[sub_resource type="AnimatedTexture" id=1]
+[sub_resource type="AnimatedTexture" id=2]
 
 [sub_resource type="DynamicFont" id=3]
 size = 32
@@ -40,18 +40,18 @@ font_data = ExtResource( 6 )
 script = ExtResource( 4 )
 
 [node name="Menu_BackgGround" type="Sprite" parent="."]
-position = Vector2( 524.343, 286.917 )
-scale = Vector2( 0.830033, 0.852846 )
+position = Vector2( 524.343, 289.162 )
+scale = Vector2( 0.830033, 0.859082 )
 texture = ExtResource( 5 )
 
 [node name="Start" type="Button" parent="."]
 margin_left = 161.996
-margin_top = 374.046
+margin_top = 359.046
 margin_right = 361.996
-margin_bottom = 429.046
-custom_fonts/font = SubResource( 2 )
+margin_bottom = 414.046
+custom_fonts/font = SubResource( 1 )
 text = "Start"
-icon = SubResource( 1 )
+icon = SubResource( 2 )
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -59,9 +59,9 @@ __meta__ = {
 
 [node name="Instructions" type="Button" parent="."]
 margin_left = 161.73
-margin_top = 426.107
+margin_top = 411.107
 margin_right = 361.73
-margin_bottom = 481.107
+margin_bottom = 466.107
 custom_fonts/font = SubResource( 3 )
 text = "Instructions"
 flat = true
@@ -71,9 +71,9 @@ __meta__ = {
 
 [node name="Exit" type="Button" parent="."]
 margin_left = 162.363
-margin_top = 475.607
+margin_top = 460.607
 margin_right = 362.363
-margin_bottom = 530.607
+margin_bottom = 515.607
 custom_fonts/font = SubResource( 4 )
 text = "Exit"
 flat = true
