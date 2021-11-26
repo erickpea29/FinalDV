@@ -3,6 +3,7 @@ extends KinematicBody2D
 var velocidad = 250 #Velocidad del personaje
 var movimiento = Vector2() #Vector de movimiento de la velocidad
 var con_slide = true #Variable para cambiar entre move_and_slide() y move_and_collide()
+var arma = false
 
 func _ready():
 	self.global_position = Global.player_initial_map_position
@@ -27,6 +28,7 @@ func get_input():
 		#$KinematicBody2D.flip_h = movimiento.x < 0
 
 	else:
+		$AnimatedSprite.playing = true
 		$AnimatedSprite.animation = "Main_Character_Idle"
 		$AudioStreamPlayer2D.pitch_scale = rand_range(0.8, 1.2)
 		$AudioStreamPlayer2D.play()
