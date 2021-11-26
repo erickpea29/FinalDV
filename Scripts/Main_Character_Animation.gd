@@ -44,12 +44,12 @@ func get_input():
 			#Verificamos que tenga arma y que se haya presionado F (disparo)
 			if Input.is_action_just_pressed("Shoot"):
 				$Player.animation = "Main_Character_Shooting"
-				print("hola hola")
+				print("hola hola")# ARREGLAR SONIDO 
 				$Shoot_SoundEffect.play()
 				shoot() #Funcion que genera la bala y realiza el disparo
 		else:
 			$Player.animation = "Main_Character_Idle" #Sprite del personaje cuando está quieto y no tiene arma
-			$Shoot_SoundEffect.volume_db = -80
+			#$Shoot_SoundEffect.volume_db = -80
 		$Steps_SoundEffect.pitch_scale = rand_range(0.8, 1.2) #Modulacion del sonido de los efectos de pasos del personaje
 		$Steps_SoundEffect.play() #Efecto de sonido de pasos del personaje
 

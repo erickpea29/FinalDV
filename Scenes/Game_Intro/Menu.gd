@@ -13,8 +13,7 @@ func _on_Exit_pressed():
 	$".".get_tree().quit()
 
 func _on_Instructions_pressed():
-	pass # Replace with function body.
-	#get_tree().change_scene("res://Scenes/Top_Level/Room_Scene.tscn")
+	get_tree().change_scene("res://Scenes/Game_Intro/Instructions.tscn")
 
 #func _on_BackgroundAudio_finished():
 #	$BackgroundAudio.play()
