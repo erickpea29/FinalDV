@@ -18,6 +18,7 @@ func get_input():
 		movimiento.x += 1
 	if Input.is_action_pressed('ui_left'):
 		$Player.flip_h = true #Si el personaje gira a la izquierda
+		$Player/Gun_Sight.transform.x * -1
 		vista = true
 		movimiento.x -= 1
 	if Input.is_action_pressed('ui_down'):
@@ -29,6 +30,7 @@ func get_input():
 	
 	if Input.is_action_just_pressed("TakeGun"):
 		arma = !arma
+	
 	#Verificamos que el personaje este en movimiento
 	if movimiento.x != 0 || movimiento.y != 0:
 		$Player.playing = true #Iniciamos las animaciones
@@ -44,6 +46,7 @@ func get_input():
 		$Steps_SoundEffect.pitch_scale = rand_range(0.8, 1.2) #Modulacion del sonido de los efectos de pasos del personaje
 		$Steps_SoundEffect.play() #Efecto de sonido de pasos del personaje
 	#Verificamos que tenga arma y que se haya presionado F (disparo)
+	
 	if arma && Input.is_action_just_pressed("Shoot"):
 		shoot() #Funcion que genera la bala y realiza el disparo
 

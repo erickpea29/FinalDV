@@ -16,8 +16,8 @@ func _on_Instructions_pressed():
 	pass # Replace with function body.
 	#get_tree().change_scene("res://Scenes/Top_Level/Room_Scene.tscn")
 
-func _on_BackgroundAudio_finished():
-	$BackgroundAudio.play()
+#func _on_BackgroundAudio_finished():
+#	$BackgroundAudio.play()
 
 func _input(event):
    # Mouse in viewport coordinates.

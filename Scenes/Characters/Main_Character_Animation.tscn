@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/Main_Character/old-man-2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Main_Character/old-man-3.png" type="Texture" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Assets/Main_Character/Main_Character_Gun/old-man-gun-4.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Main_Character/Main_Character_Gun/old-man-gun-7.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Main_Character/Main_Character_Shoot/old-man-gun-shoot-1.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Audio/shoot.ogg" type="AudioStream" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -73,3 +74,6 @@ shape = SubResource( 2 )
 [node name="Steps_SoundEffect" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 10 )
 volume_db = 20.0
+
+[node name="Shoot_SoundEffect" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 20 )
