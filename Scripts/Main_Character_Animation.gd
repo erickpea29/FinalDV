@@ -4,6 +4,7 @@ var velocidad = 250 #Velocidad del personaje
 var movimiento = Vector2() #Vector de movimiento de la velocidad
 var con_slide = true #Variable para cambiar entre move_and_slide() y move_and_collide()
 var arma = false
+#var dispara = false
 
 func _ready():
 	self.global_position = Global.player_initial_map_position
@@ -20,21 +21,23 @@ func get_input():
 		movimiento.y += 1
 	if Input.is_action_pressed('ui_up'):
 		movimiento.y -= 1
+	
 	movimiento = movimiento.normalized() * velocidad
 	
 	if Input.is_action_just_pressed("TakeGun"):
 		arma = !arma
 	
 	if movimiento.x != 0 || movimiento.y != 0:
+		#dispara = false
 		$AnimatedSprite.playing = true
 		if arma:
 			$AnimatedSprite.animation = "Main_Character_Gun_Walking"
 		else:
 			$AnimatedSprite.animation = "Main_Character_Walking"
-		#$KinematicBody2D.flip_h = movimiento.x < 0
+			#$KinematicBody2D.flip_h = movimiento.x < 0
 	else:
 		if arma:
-			$AnimatedSprite.animation = "Main_Character_Gun_Idle"
+			$AnimatedSprite.animation = "Main_Character_Shooting"
 		else:
 			$AnimatedSprite.animation = "Main_Character_Idle"
 		$AudioStreamPlayer2D.pitch_scale = rand_range(0.8, 1.2)
