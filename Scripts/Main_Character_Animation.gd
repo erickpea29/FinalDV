@@ -22,14 +22,21 @@ func get_input():
 		movimiento.y -= 1
 	movimiento = movimiento.normalized() * velocidad
 	
+	if Input.is_action_just_pressed("TakeGun"):
+		arma = !arma
+	
 	if movimiento.x != 0 || movimiento.y != 0:
 		$AnimatedSprite.playing = true
-		$AnimatedSprite.animation = "Main_Character_Gun"
+		if arma:
+			$AnimatedSprite.animation = "Main_Character_Gun_Walking"
+		else:
+			$AnimatedSprite.animation = "Main_Character_Walking"
 		#$KinematicBody2D.flip_h = movimiento.x < 0
-
 	else:
-		$AnimatedSprite.playing = true
-		$AnimatedSprite.animation = "Main_Character_Idle"
+		if arma:
+			$AnimatedSprite.animation = "Main_Character_Gun_Idle"
+		else:
+			$AnimatedSprite.animation = "Main_Character_Idle"
 		$AudioStreamPlayer2D.pitch_scale = rand_range(0.8, 1.2)
 		$AudioStreamPlayer2D.play()
 
