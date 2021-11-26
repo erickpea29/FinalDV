@@ -19,13 +19,13 @@
 [ext_resource path="res://Assets/Main_Character/Main_Character_Gun/old-man-gun-4.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Main_Character/Main_Character_Gun/old-man-gun-7.png" type="Texture" id=18]
 [ext_resource path="res://Assets/Main_Character/Main_Character_Shoot/old-man-gun-shoot-1.png" type="Texture" id=19]
-[ext_resource path="res://Assets/Audio/shoot.ogg" type="AudioStream" id=20]
+[ext_resource path="res://Assets/Audio/Shotgun_Sound.ogg" type="AudioStream" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
-"loop": false,
-"name": "Main_Character_Idle",
+"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Main_Character_Walking",
 "speed": 8.0
 }, {
 "frames": [ ExtResource( 15 ) ],
@@ -33,19 +33,19 @@ animations = [ {
 "name": "Main_Character_Gun_Idle",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 14 ) ],
-"loop": true,
-"name": "Main_Character_Gun_Walking",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 19 ) ],
 "loop": false,
 "name": "Main_Character_Shooting",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 4 ) ],
+"loop": false,
+"name": "Main_Character_Idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 13 ), ExtResource( 17 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 18 ), ExtResource( 14 ) ],
 "loop": true,
-"name": "Main_Character_Walking",
+"name": "Main_Character_Gun_Walking",
 "speed": 8.0
 } ]
 
@@ -75,5 +75,5 @@ shape = SubResource( 2 )
 stream = ExtResource( 10 )
 volume_db = 20.0
 
-[node name="Shoot_SoundEffect" type="AudioStreamPlayer2D" parent="."]
+[node name="Shoot_SoundEffect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
