@@ -13,46 +13,46 @@ size = 64
 outline_size = 5
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.133333, 0.0980392, 0.109804, 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 32
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 3
 font_data = ExtResource( 6 )
 
-[sub_resource type="AnimatedTexture" id=3]
+[sub_resource type="AnimatedTexture" id=4]
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.133333, 0.0980392, 0.109804, 1 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=6]
 size = 32
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 3
 font_data = ExtResource( 6 )
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.133333, 0.0980392, 0.109804, 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=8]
 size = 32
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 extra_spacing_char = 3
 font_data = ExtResource( 6 )
 
-[sub_resource type="Gradient" id=7]
+[sub_resource type="Gradient" id=9]
 offsets = PoolRealArray( 0, 0.138462, 0.446154, 1 )
 colors = PoolColorArray( 0.773438, 0.773438, 0.773438, 1, 0.128377, 0.0312805, 0.320313, 1, 0.0632011, 0.0153996, 0.157692, 1, 0, 0, 0, 1 )
 
-[sub_resource type="GradientTexture" id=8]
-gradient = SubResource( 7 )
+[sub_resource type="GradientTexture" id=10]
+gradient = SubResource( 9 )
 
-[sub_resource type="ParticlesMaterial" id=6]
+[sub_resource type="ParticlesMaterial" id=11]
 emission_shape = 3
 emission_point_count = 1
 flag_disable_z = true
@@ -66,7 +66,7 @@ orbit_velocity = 1.5
 orbit_velocity_random = 0.0
 scale = 2.0
 scale_random = 0.5
-color_ramp = SubResource( 8 )
+color_ramp = SubResource( 10 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 4 )
@@ -120,10 +120,10 @@ margin_left = 161.0
 margin_top = 363.0
 margin_right = 361.0
 margin_bottom = 405.0
-custom_styles/hover = SubResource( 9 )
-custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Start"
-icon = SubResource( 3 )
+icon = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -133,8 +133,8 @@ margin_left = 162.0
 margin_top = 411.0
 margin_right = 362.0
 margin_bottom = 453.0
-custom_styles/hover = SubResource( 10 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/hover = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 text = "Instructions"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -145,8 +145,8 @@ margin_left = 162.0
 margin_top = 459.0
 margin_right = 362.0
 margin_bottom = 498.0
-custom_styles/hover = SubResource( 11 )
-custom_fonts/font = SubResource( 5 )
+custom_styles/hover = SubResource( 7 )
+custom_fonts/font = SubResource( 8 )
 text = "Exit"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -154,6 +154,7 @@ __meta__ = {
 
 [node name="BackgroundAudio" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = -10.0
 
 [node name="Mouse_Pointer" type="Particles2D" parent="."]
 position = Vector2( -25.8815, -25.9477 )
@@ -164,7 +165,8 @@ lifetime = 0.5
 speed_scale = 0.5
 explosiveness = 0.5
 randomness = 1.0
-process_material = SubResource( 6 )
+process_material = SubResource( 11 )
+
 [connection signal="pressed" from="Control/Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Control/Instructions" to="." method="_on_Instructions_pressed"]
 [connection signal="pressed" from="Control/Exit" to="." method="_on_Exit_pressed"]

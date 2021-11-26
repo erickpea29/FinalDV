@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/footsteps-on-wooden-floor-6803.mp3-182b2e1089b38d401a29f77272818f78.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/footsteps-on-wooden-floor-6803.mp3"
+dest_files=[ "res://.import/footsteps-on-wooden-floor-6803.mp3-182b2e1089b38d401a29f77272818f78.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

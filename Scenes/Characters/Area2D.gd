@@ -1,4 +1,4 @@
-extends KinematicBody2D
+extends Area2D
 
 var velocidad = 250 #Velocidad del personaje
 var movimiento = Vector2() #Vector de movimiento de la velocidad

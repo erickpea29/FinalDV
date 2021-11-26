@@ -22,6 +22,13 @@ func _physics_process(delta):
 func _on_Area2D_body_entered(body):
 	if body != self:
 		Main_Character_Animation = body
+		
+		
+
 
 func _on_Area2D_body_exited(body):
 	Main_Character_Animation = null
+
+
+func _on_Area2D2_body_entered(body):
+	Livescounter.lives -= 1
