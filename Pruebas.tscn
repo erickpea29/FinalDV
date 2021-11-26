@@ -9,7 +9,7 @@
 [node name="Enemy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 87.9494, 91.9829 )
 
-[node name="Main_Character_Animation" parent="." instance=ExtResource( 1 )]
-position = Vector2( 30.204, 471.937 )
-
 [node name="Lives" parent="." instance=ExtResource( 3 )]
+
+[node name="Main_Character_Animation" parent="." instance=ExtResource( 1 )]
+position = Vector2( 628.99, 450.72 )

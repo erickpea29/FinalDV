@@ -22,7 +22,8 @@ func get_input():
 	movimiento = movimiento.normalized() * velocidad
 	
 	if movimiento.x != 0 || movimiento.y != 0:
-		$AnimatedSprite.animation = "Main_Character_Walking"
+		$AnimatedSprite.playing = true
+		$AnimatedSprite.animation = "Main_Character_Gun"
 		#$KinematicBody2D.flip_h = movimiento.x < 0
 
 	else:
