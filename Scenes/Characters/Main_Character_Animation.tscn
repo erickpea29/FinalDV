@@ -9,18 +9,18 @@
 [ext_resource path="res://Assets/Main_Character/old-man-7.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Main_Character/old-man-6.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/Main_Character_Animation.gd" type="Script" id=9]
-[ext_resource path="res://Assets/Audio/footsteps-on-wooden-floor-6803.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Audio/footsteps-on-wooden-floor-6803.ogg" type="AudioStream" id=10]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Main_Character_Walking",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 4 ) ],
 "loop": false,
 "name": "Main_Character_Idle",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Main_Character_Walking",
 "speed": 8.0
 } ]
 
