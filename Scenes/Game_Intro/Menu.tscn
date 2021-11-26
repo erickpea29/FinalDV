@@ -166,7 +166,6 @@ speed_scale = 0.5
 explosiveness = 0.5
 randomness = 1.0
 process_material = SubResource( 11 )
-
 [connection signal="pressed" from="Control/Start" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Control/Instructions" to="." method="_on_Instructions_pressed"]
 [connection signal="pressed" from="Control/Exit" to="." method="_on_Exit_pressed"]

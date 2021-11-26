@@ -27,11 +27,6 @@ animations = [ {
 "name": "Main_Character_Idle",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 3 ) ],
-"loop": true,
-"name": "Main_Character_Walking",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 15 ) ],
 "loop": false,
 "name": "Main_Character_Gun_Idle",
@@ -46,6 +41,11 @@ animations = [ {
 "loop": false,
 "name": "Main_Character_Shooting",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Main_Character_Walking",
+"speed": 8.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
@@ -57,16 +57,19 @@ collision_layer = 2
 collision_mask = 257
 script = ExtResource( 9 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 43.8406, 1.41422 )
+[node name="Player" type="AnimatedSprite" parent="."]
+position = Vector2( 1.00329, 0.154302 )
 frames = SubResource( 1 )
 animation = "Main_Character_Shooting"
+
+[node name="Gun_Sight" type="Position2D" parent="Player"]
+position = Vector2( 59.717, 8.069 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 4.91632, 26.1607 )
 rotation = 0.0255716
 shape = SubResource( 2 )
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Steps_SoundEffect" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 10 )
 volume_db = 20.0

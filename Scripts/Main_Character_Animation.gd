@@ -4,7 +4,8 @@ var velocidad = 250 #Velocidad del personaje
 var movimiento = Vector2() #Vector de movimiento de la velocidad
 var con_slide = true #Variable para cambiar entre move_and_slide() y move_and_collide()
 var arma = false
-#var dispara = false
+var dispara_bala = preload("res://Scenes/Objects/Gun_Bullet.tscn")
+var vista
 
 func _ready():
 	self.global_position = Global.player_initial_map_position
@@ -12,10 +13,12 @@ func _ready():
 func get_input():
 	movimiento = Vector2()
 	if Input.is_action_pressed('ui_right'):
-		$AnimatedSprite.flip_h = false #Si el personaje gira a la derecha
+		$Player.flip_h = false #Si el personaje gira a la derecha
+		vista = false
 		movimiento.x += 1
 	if Input.is_action_pressed('ui_left'):
-		$AnimatedSprite.flip_h = true #Si el personaje gira a la izquierda
+		$Player.flip_h = true #Si el personaje gira a la izquierda
+		vista = true
 		movimiento.x -= 1
 	if Input.is_action_pressed('ui_down'):
 		movimiento.y += 1
@@ -26,22 +29,29 @@ func get_input():
 	
 	if Input.is_action_just_pressed("TakeGun"):
 		arma = !arma
-	
+	#Verificamos que el personaje este en movimiento
 	if movimiento.x != 0 || movimiento.y != 0:
-		#dispara = false
-		$AnimatedSprite.playing = true
-		if arma:
-			$AnimatedSprite.animation = "Main_Character_Gun_Walking"
+		$Player.playing = true #Iniciamos las animaciones
+		if arma: #Verificamos que el personaje tenga o no arma para cambiar al sprite correspondiente
+			$Player.animation = "Main_Character_Gun_Walking"#Sprite del personaje cuando esta moviendose y tiene arma
 		else:
-			$AnimatedSprite.animation = "Main_Character_Walking"
-			#$KinematicBody2D.flip_h = movimiento.x < 0
-	else:
+			$Player.animation = "Main_Character_Walking" #Sprite del personaje cuando esta moviendose y no tiene arma
+	else: #Si no está en movimiento verificamos que tenga o no arma
 		if arma:
-			$AnimatedSprite.animation = "Main_Character_Shooting"
+			$Player.animation = "Main_Character_Shooting" #Sprite del personaje cuando está quieto y tiene arma
 		else:
-			$AnimatedSprite.animation = "Main_Character_Idle"
-		$AudioStreamPlayer2D.pitch_scale = rand_range(0.8, 1.2)
-		$AudioStreamPlayer2D.play()
+			$Player.animation = "Main_Character_Idle" #Sprite del personaje cuando está quieto y no tiene arma
+		$Steps_SoundEffect.pitch_scale = rand_range(0.8, 1.2) #Modulacion del sonido de los efectos de pasos del personaje
+		$Steps_SoundEffect.play() #Efecto de sonido de pasos del personaje
+	#Verificamos que tenga arma y que se haya presionado F (disparo)
+	if arma && Input.is_action_just_pressed("Shoot"):
+		shoot() #Funcion que genera la bala y realiza el disparo
+
+#Funcion para generar la bala y animar el disparo del arma del personaje
+func shoot():
+	var bala = dispara_bala.instance() #Instanciamos la bala
+	bala.inicio($Player/Gun_Sight.global_position, vista) #Iniciamos valores de posicion para generar el disparo
+	get_parent().add_child(bala) #Agregamos la escena de la bala
 
 func _physics_process(delta):
 	get_input()
