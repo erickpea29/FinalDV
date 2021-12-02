@@ -122,6 +122,8 @@ autostart = true
 wait_time = 13.5
 one_shot = true
 autostart = true
+[connection signal="pressed" from="Control/Main_Menu" to="." method="_on_Main_Menu_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="timeout" from="ShowCover" to="." method="_on_ShowCover_timeout"]
 [connection signal="timeout" from="Show_Labels" to="." method="_on_Show_Labels_timeout"]
 [connection signal="timeout" from="Show_CommingSoon" to="." method="_on_Show_CommingSoon_timeout"]
