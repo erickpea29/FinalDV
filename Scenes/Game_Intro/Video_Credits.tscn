@@ -20,5 +20,6 @@ autoplay = true
 [node name="Read_Credits" type="Timer" parent="."]
 wait_time = 2.5
 one_shot = true
+
 [connection signal="finished" from="Credits" to="." method="_on_Credits_finished"]
 [connection signal="timeout" from="Read_Credits" to="." method="_on_Read_Credits_timeout"]

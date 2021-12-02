@@ -81,7 +81,7 @@ polygon = PoolVector2Array( 309.742, 362.009, 139.881, 362.009, 142.403, 525.983
 polygon = PoolVector2Array( 876.493, 321.242, 1022.93, 465.02, 963.428, 287.224 )
 
 [node name="Main_Character_Animation2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 492.556, 420.474 )
+position = Vector2( 833.703, 455.436 )
 
 [node name="Portal" parent="." instance=ExtResource( 3 )]
 position = Vector2( -348.393, -220.249 )
@@ -91,4 +91,4 @@ player_spawn_location = Vector2( 685, 305 )
 [node name="Lives" parent="." instance=ExtResource( 4 )]
 
 [node name="Node2D" parent="." instance=ExtResource( 5 )]
-position = Vector2( 168.484, 405.101 )
+position = Vector2( 173.535, 401.733 )

@@ -18,6 +18,8 @@ func _physics_process(delta):
 		
 	move = move.normalized() * 1.5
 	move = move_and_collide(move)
+	
+	#Mario es pendejo y no sabe diferenciar pero esta es para bajar vida al mounstro
 
 func _on_Area2D_body_entered(body):
 	if body != self:
@@ -25,7 +27,7 @@ func _on_Area2D_body_entered(body):
 		
 		
 
-
+#
 func _on_Area2D_body_exited(body):
 	Main_Character_Animation = null
 

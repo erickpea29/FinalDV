@@ -6,18 +6,6 @@
 [ext_resource path="res://Scripts/Final_Credits.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Audio/house_openSound_mp3cut.net.ogg" type="AudioStream" id=5]
 
-[sub_resource type="DynamicFont" id=3]
-size = 32
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
-
-[sub_resource type="DynamicFont" id=4]
-size = 32
-outline_size = 2
-outline_color = Color( 0, 0, 0, 1 )
-font_data = ExtResource( 1 )
-
 [sub_resource type="DynamicFont" id=1]
 size = 32
 outline_size = 2
@@ -25,6 +13,18 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 64
 outline_size = 2
 outline_color = Color( 0.556863, 0.192157, 0.0156863, 1 )
@@ -50,7 +50,7 @@ margin_left = 88.7242
 margin_top = 241.632
 margin_right = 238.724
 margin_bottom = 279.632
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 1 )
 text = "Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -61,7 +61,7 @@ margin_left = 92.0
 margin_top = 309.0
 margin_right = 236.0
 margin_bottom = 347.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 2 )
 text = "Quit"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -72,7 +72,7 @@ margin_left = 164.234
 margin_top = 32.0917
 margin_right = 831.234
 margin_bottom = 64.0917
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
 text = "Thanks for playing, hope you enjoy!"
 align = 1
 valign = 1
@@ -86,7 +86,7 @@ margin_left = 592.0
 margin_top = 524.0
 margin_right = 993.0
 margin_bottom = 588.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
 text = "Comming Soon..."
 align = 1
 valign = 1
@@ -122,6 +122,7 @@ autostart = true
 wait_time = 13.5
 one_shot = true
 autostart = true
+
 [connection signal="pressed" from="Control/Main_Menu" to="." method="_on_Main_Menu_pressed"]
 [connection signal="pressed" from="Control/Quit" to="." method="_on_Quit_pressed"]
 [connection signal="timeout" from="ShowCover" to="." method="_on_ShowCover_timeout"]

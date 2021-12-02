@@ -2,10 +2,60 @@ extends Node
 
 var player_initial_map_position = Vector2(560,340)
 
-var start = false
+var bul = true
 
-func _scene1():
-	if start == false:
+func _prueba():
+	print("Aiuda")
+	bul = false
+	if bul == false:
 		print("ola")
-		
+		print(bul)
 	
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
