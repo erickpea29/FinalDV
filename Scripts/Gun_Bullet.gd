@@ -8,13 +8,13 @@ var movimiento = Vector2() #Vector de movimiento de la bala
 func _ready():
 	pass # Replace with function body.
 
-func inicio(posicion_inicial):
-	#if movimiento_vista:
-	position = posicion_inicial
-		#movimiento = Vector2(-velocidad, 0)
-	#else:
-		#position = posicion_inicial
-	movimiento = Vector2(velocidad, 0)
+func inicio(posicion_inicial, move):
+	if move == true:
+		position = posicion_inicial
+		movimiento = Vector2(-velocidad, 0)
+	else:
+		position = posicion_inicial
+		movimiento = Vector2(velocidad, 0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):

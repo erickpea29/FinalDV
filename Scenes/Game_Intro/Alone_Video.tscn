@@ -16,4 +16,7 @@ margin_right = 1018.0
 margin_bottom = 594.0
 stream = ExtResource( 1 )
 autoplay = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

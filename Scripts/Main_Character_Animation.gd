@@ -6,6 +6,7 @@ var con_slide = true #Variable para cambiar entre move_and_slide() y move_and_co
 var arma = false #Variable que nos permite poner y quitar sprite de personaje con arma
 #Cargamos escena de vala para instanciarla
 var dispara_bala = preload("res://Scenes/Objects/Gun_Bullet.tscn")
+var dir = false
 
 func _ready():
 	self.global_position = Global.player_initial_map_position
@@ -14,9 +15,11 @@ func _ready():
 func get_input():
 	movimiento = Vector2() #Asignamos vector de movimiento
 	if Input.is_action_pressed('ui_right'):
+			dir = false
 			$Player.flip_h = false #Si el personaje gira a la derecha
 			movimiento.x += 1
 	if Input.is_action_pressed('ui_left'):
+			dir = true
 			$Player.flip_h = true #Si el personaje gira a la izquierda
 			movimiento.x -= 1
 	if Input.is_action_pressed('ui_down'): #Si el personaje va hacia abajo
@@ -44,8 +47,6 @@ func get_input():
 			#Verificamos que tenga arma y que se haya presionado F (disparo)
 			if Input.is_action_just_pressed("Shoot"):
 				$Player.animation = "Main_Character_Shooting"
-				print("hola hola")# ARREGLAR SONIDO 
-				$Shoot_SoundEffect.play()
 				shoot() #Funcion que genera la bala y realiza el disparo
 		else:
 			$Player.animation = "Main_Character_Idle" #Sprite del personaje cuando está quieto y no tiene arma
@@ -56,7 +57,10 @@ func get_input():
 #Funcion para generar la bala y animar el disparo del arma del personaje
 func shoot():
 	var bala = dispara_bala.instance() #Instanciamos la bala
-	bala.inicio($Player/Gun_Sight.global_position) #Iniciamos valores de posicion para generar el disparo
+	if($Player.flip_h == true):
+		bala.inicio($Player/Gun_Flipped.global_position, dir)
+	else:
+		bala.inicio($Player/Gun_Sight.global_position, dir) #Iniciamos valores de posicion para generar el disparo
 	get_parent().add_child(bala) #Agregamos la escena de la bala
 
 func _physics_process(delta):
