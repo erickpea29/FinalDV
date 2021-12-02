@@ -10,7 +10,6 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
-
 }
 
 [application]
@@ -47,6 +46,8 @@ Shoot={
 [layer_names]
 
 2d_physics/layer_2="Player"
+2d_physics/layer_3="Bullet"
+2d_physics/layer_4="Enemy"
 2d_physics/layer_9="Portal"
 
 [rendering]

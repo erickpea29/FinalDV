@@ -19,16 +19,18 @@ animations = [ {
 } ]
 
 [sub_resource type="CapsuleShape2D" id=2]
-height = 80.3588
+height = 94.4076
 
 [sub_resource type="CircleShape2D" id=3]
-radius = 516.439
+radius = 831.583
 
 [sub_resource type="CapsuleShape2D" id=4]
-radius = 20.5682
+radius = 142.324
 height = 0.0
 
 [node name="Enemy" type="KinematicBody2D"]
+collision_layer = 8
+collision_mask = 4
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
@@ -43,6 +45,7 @@ shape = SubResource( 2 )
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2( -5.0397, -1.25992 )
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 5.2973, 1.05946 )
@@ -52,7 +55,7 @@ shape = SubResource( 3 )
 position = Vector2( 50.3245, 2.11893 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( -50.1485, -3.81499 )
+position = Vector2( -52.0363, 1.84816 )
 shape = SubResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
