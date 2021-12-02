@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/Scenes_BackGrounds/Basement_Background.jpeg" type="Texture" id=1]
 [ext_resource path="res://Scenes/Characters/Main_Character_Animation.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Lives.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Objects/Gun.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 526.499, 12.0632 )
@@ -88,3 +89,6 @@ next_scene_path = "res://Scenes/Low_Level/Kitchen_Scene.tscn"
 player_spawn_location = Vector2( 685, 305 )
 
 [node name="Lives" parent="." instance=ExtResource( 4 )]
+
+[node name="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 168.484, 405.101 )
