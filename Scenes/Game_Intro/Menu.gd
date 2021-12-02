@@ -1,6 +1,9 @@
 extends Node2D
 
 #VARIABLES
+var ambientSound = preload("res://Assets/Audio/Background_Scenes_Sound.ogg")
+var rainSound = preload("res://Assets/Audio/rain-thunder.ogg")
+# Called when the node enters the scene tree for the first time.
 
 func _ready():
 	$BackgroundAudio.play()
@@ -8,6 +11,8 @@ func _ready():
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://Scenes/Top_Level/Room_Scene.tscn")
+	AmbientationBackground.backgroundMusic(ambientSound)
+	RainBackgroundSound.backgroundRainEffect(rainSound)
 
 func _on_Exit_pressed():
 	$".".get_tree().quit()
