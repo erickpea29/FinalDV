@@ -75,10 +75,10 @@ __meta__ = {
 }
 
 [node name="Movement" type="Label" parent="."]
-margin_left = 505.62
-margin_top = 15.063
-margin_right = 653.62
-margin_bottom = 57.063
+margin_left = 635.875
+margin_top = 22.614
+margin_right = 783.875
+margin_bottom = 64.614
 custom_fonts/font = SubResource( 1 )
 text = "MOVEMENT:"
 align = 1
@@ -89,10 +89,10 @@ __meta__ = {
 }
 
 [node name="Interaction" type="Label" parent="."]
-margin_left = 486.35
-margin_top = 244.0
-margin_right = 683.35
-margin_bottom = 289.0
+margin_left = 607.166
+margin_top = 260.99
+margin_right = 804.166
+margin_bottom = 305.99
 custom_fonts/font = SubResource( 1 )
 text = "INTERACTION:"
 align = 1
@@ -103,24 +103,24 @@ __meta__ = {
 }
 
 [node name="ArrowKeys_up" type="Sprite" parent="."]
-position = Vector2( 563.997, 107.225 )
+position = Vector2( 694.251, 114.776 )
 scale = Vector2( 0.270325, 0.274904 )
 texture = ExtResource( 3 )
 
 [node name="ArrowKeys_Left" type="Sprite" parent="."]
-position = Vector2( 490.839, 181.224 )
+position = Vector2( 621.093, 188.775 )
 rotation = -1.5676
 scale = Vector2( 0.270325, 0.274904 )
 texture = ExtResource( 3 )
 
 [node name="ArrowKeys_Right" type="Sprite" parent="."]
-position = Vector2( 637.051, 181.169 )
+position = Vector2( 767.306, 188.72 )
 rotation = 1.56678
 scale = Vector2( 0.270325, 0.274904 )
 texture = ExtResource( 3 )
 
 [node name="ArrowKeys_Down" type="Sprite" parent="."]
-position = Vector2( 564.315, 181.224 )
+position = Vector2( 694.57, 188.775 )
 scale = Vector2( 0.27, -0.275 )
 texture = ExtResource( 3 )
 
@@ -136,10 +136,10 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="."]
-margin_left = 628.181
-margin_top = 504.682
-margin_right = 736.181
-margin_bottom = 551.682
+margin_left = 607.416
+margin_top = 506.57
+margin_right = 787.416
+margin_bottom = 553.57
 custom_fonts/font = SubResource( 3 )
 text = "Back to Menu"
 __meta__ = {
