@@ -16,9 +16,14 @@ func _ready():
 #OBJECT INTERACTION
 #Entry Door
 func _on_Object_Int_body_entered(body):
-	$Dialog.text = str("Hmm, seems to be locked, maybe I need a key...")
-	$Dialog.show()
-	$Hide_Dialog.start()
+	if Global.key == true:
+		$Dialog.text = str("Hmm, seems to be locked, maybe I need a key...")
+		$Dialog.show()
+		$Hide_Dialog.start()
+	if Global.key == false:
+		get_tree().change_scene("res://Scenes/Game_Intro/Video_Credits.tscn")
+	
+	
 func _on_Hide_Dialog_timeout():
 	$Dialog.hide()
 #Dekstop

@@ -3,15 +3,14 @@
 [ext_resource path="res://Assets/Objects/Llave.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Objects/Key.gd" type="Script" id=2]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 5.82545
-height = 0.0
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.7082, 4.65541 )
 
 [node name="Area2D" type="Area2D"]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 1.54374, 0.189693 )
+position = Vector2( 7.96674, 3.23565 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

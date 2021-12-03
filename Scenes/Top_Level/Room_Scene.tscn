@@ -33,7 +33,7 @@ position = Vector2( 0, 1.12201 )
 polygon = PoolVector2Array( -345.169, 139.024, -345.984, 130.293, -333.752, 129.896, -335.383, -92.34, -284.007, -92.34, -344.761, -104.642 )
 
 [node name="Main_Character_Animation" parent="." instance=ExtResource( 3 )]
-position = Vector2( 668.925, 257.678 )
+position = Vector2( 776.019, 332.013 )
 
 [node name="Portal" parent="." instance=ExtResource( 1 )]
 position = Vector2( 99.8933, -171.246 )
