@@ -81,7 +81,7 @@ position = Vector2( 514.774, 19.799 )
 shape = SubResource( 6 )
 
 [node name="Main_Character_Animation" parent="." instance=ExtResource( 2 )]
-position = Vector2( 729.682, 159.791 )
+position = Vector2( 648.04, 364.635 )
 
 [node name="Portal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 122.805, -72.0813 )
