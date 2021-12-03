@@ -51,7 +51,7 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 14.2561
-height = 170.106
+height = 170.791
 
 [node name="Main_Character_Animation" type="KinematicBody2D"]
 collision_layer = 2
@@ -71,7 +71,8 @@ position = Vector2( 59.717, 8.069 )
 position = Vector2( -58.467, 8.069 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 28.9579, 14.1399 )
+visible = false
+position = Vector2( 4.91632, 26.1607 )
 rotation = 0.0255716
 shape = SubResource( 2 )
 
