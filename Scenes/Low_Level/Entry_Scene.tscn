@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Scenes_BackGrounds/Entry_Background_closed.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Characters/Main_Character_Animation.tscn" type="PackedScene" id=2]
@@ -24,6 +24,15 @@ extents = Vector2( 58.8963, 10 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 86.713, 10 )
 
+[sub_resource type="CapsuleShape2D" id=8]
+height = 0.0
+
+[sub_resource type="CapsuleShape2D" id=9]
+radius = 7.11823
+height = 0.0757446
+
+[sub_resource type="CapsuleShape2D" id=10]
+
 [node name="Entry_Scene" type="Node2D"]
 script = ExtResource( 5 )
 
@@ -44,7 +53,7 @@ position = Vector2( 517.152, 598.978 )
 shape = SubResource( 2 )
 
 [node name="Desk" type="CollisionShape2D" parent="Entry_Objects"]
-position = Vector2( 824.931, 293.665 )
+position = Vector2( 825.822, 257.265 )
 shape = SubResource( 3 )
 
 [node name="Wall_Door" type="CollisionShape2D" parent="Entry_Objects"]
@@ -81,3 +90,44 @@ next_scene_path = "res://Scenes/Top_Level/Hall_Scene2.tscn"
 player_spawn_location = Vector2( 65, 420 )
 
 [node name="Lives" parent="." instance=ExtResource( 4 )]
+
+[node name="Object_Int" type="Area2D" parent="."]
+position = Vector2( 293.734, 228.328 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Object_Int"]
+position = Vector2( -2.6727, -38.3086 )
+shape = SubResource( 8 )
+
+[node name="Hide_Dialog" type="Timer" parent="."]
+wait_time = 1.2
+one_shot = true
+
+[node name="Dialog" type="Label" parent="."]
+margin_left = 366.476
+margin_top = 475.152
+margin_right = 708.476
+margin_bottom = 580.152
+text = "Hmm, seems to be locked, maybe I need a key..."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Desktop_Int" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Desktop_Int"]
+position = Vector2( 790.137, 287.138 )
+shape = SubResource( 9 )
+
+[node name="Door" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
+position = Vector2( 976.916, 386.984 )
+shape = SubResource( 10 )
+[connection signal="body_entered" from="Object_Int" to="." method="_on_Object_Int_body_entered"]
+[connection signal="body_exited" from="Object_Int" to="." method="_on_Object_Int_body_exited"]
+[connection signal="timeout" from="Hide_Dialog" to="." method="_on_Hide_Dialog_timeout"]
+[connection signal="body_entered" from="Desktop_Int" to="." method="_on_Desktop_Int_body_entered"]
+[connection signal="body_entered" from="Door" to="." method="_on_Area2D_body_entered"]
