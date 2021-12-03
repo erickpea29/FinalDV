@@ -5,7 +5,6 @@ const loadEnemy = preload("res://Assets/enemy/Enemy.tscn")
 func _ready():
 	$Dialog.hide()
 	if Global.bul == false: 
-		print("Hola")
 		#Make instance
 		var GrabedInstance= loadEnemy.instance()
 		#Attach it to the tree
@@ -13,7 +12,7 @@ func _ready():
 		self.add_child(GrabedInstance)
 
 func _on_Picture_body_entered(body):
-	$Dialog.text = str("I always hated this picture.")
+	$Dialog.text = str("I've always hated that painting.")
 	$Dialog.show()
 	$HideDialog.start()
 

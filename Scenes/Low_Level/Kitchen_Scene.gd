@@ -7,7 +7,7 @@ func _ready():
 #INTERACTION WITH OBJECTS
 #Table
 func _on_Table_body_entered(body):
-	$Dialog.text = str("No time for have snack")
+	$Dialog.text = str("No time for snacks")
 	$Dialog.show()
 	$Show_Dialogs.start()
 #Stove

@@ -15,7 +15,7 @@ func _ready():
 #OBJECT INTERACTION
 #Window
 func _on_Window_body_entered(body):
-	$Dialog.text = str("It´s raining really hard...")
+	$Dialog.text = str("The weather is bad...")
 	$Dialog.show()
 	$Hide_Dialogs.start()
 #Buro
