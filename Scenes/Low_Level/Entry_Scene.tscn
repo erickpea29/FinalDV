@@ -24,14 +24,14 @@ extents = Vector2( 58.8963, 10 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 86.713, 10 )
 
-[sub_resource type="CapsuleShape2D" id=8]
+[sub_resource type="CapsuleShape2D" id=7]
 height = 0.0
 
-[sub_resource type="CapsuleShape2D" id=9]
+[sub_resource type="CapsuleShape2D" id=8]
 radius = 7.11823
 height = 0.0757446
 
-[sub_resource type="CapsuleShape2D" id=10]
+[sub_resource type="CapsuleShape2D" id=9]
 
 [node name="Entry_Scene" type="Node2D"]
 script = ExtResource( 5 )
@@ -96,7 +96,7 @@ position = Vector2( 293.734, 228.328 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Object_Int"]
 position = Vector2( -2.6727, -38.3086 )
-shape = SubResource( 8 )
+shape = SubResource( 7 )
 
 [node name="Hide_Dialog" type="Timer" parent="."]
 wait_time = 1.2
@@ -119,13 +119,14 @@ __meta__ = {
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Desktop_Int"]
 position = Vector2( 790.137, 287.138 )
-shape = SubResource( 9 )
+shape = SubResource( 8 )
 
 [node name="Door" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
 position = Vector2( 976.916, 386.984 )
-shape = SubResource( 10 )
+shape = SubResource( 9 )
+
 [connection signal="body_entered" from="Object_Int" to="." method="_on_Object_Int_body_entered"]
 [connection signal="body_exited" from="Object_Int" to="." method="_on_Object_Int_body_exited"]
 [connection signal="timeout" from="Hide_Dialog" to="." method="_on_Hide_Dialog_timeout"]
