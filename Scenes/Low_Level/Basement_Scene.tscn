@@ -109,7 +109,7 @@ position = Vector2( 173.957, 402.916 )
 shape = SubResource( 9 )
 
 [node name="Hide_Dialog" type="Timer" parent="."]
-wait_time = 1.5
+wait_time = 2.5
 one_shot = true
 
 [node name="Dialog" type="Label" parent="."]
@@ -129,5 +129,6 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="body_entered" from="gun" to="." method="_on_gun_body_entered"]
 [connection signal="timeout" from="Hide_Dialog" to="." method="_on_Hide_Dialog_timeout"]

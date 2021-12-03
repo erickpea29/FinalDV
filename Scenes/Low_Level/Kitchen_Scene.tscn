@@ -115,7 +115,7 @@ position = Vector2( 327.568, 439.066 )
 shape = SubResource( 7 )
 
 [node name="Show_Dialogs" type="Timer" parent="."]
-wait_time = 1.2
+wait_time = 2.5
 one_shot = true
 
 [node name="Stove" type="Area2D" parent="."]
@@ -125,6 +125,7 @@ scale = Vector2( 1.022, 0.99172 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stove"]
 position = Vector2( 393.052, 208.542 )
 shape = SubResource( 8 )
+
 [connection signal="body_entered" from="Table" to="." method="_on_Table_body_entered"]
 [connection signal="timeout" from="Show_Dialogs" to="." method="_on_Show_Dialogs_timeout"]
 [connection signal="body_entered" from="Stove" to="." method="_on_Stove_body_entered"]

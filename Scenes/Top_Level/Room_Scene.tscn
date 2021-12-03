@@ -68,7 +68,7 @@ scale = Vector2( 1, 0.32 )
 shape = SubResource( 1 )
 
 [node name="Hide_Dialogs" type="Timer" parent="."]
-wait_time = 1.2
+wait_time = 2.55
 one_shot = true
 
 [node name="Buro2" type="Area2D" parent="."]
@@ -76,6 +76,7 @@ one_shot = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buro2"]
 position = Vector2( 191.13, 317.865 )
 shape = SubResource( 2 )
+
 [connection signal="body_entered" from="Window" to="." method="_on_Window_body_entered"]
 [connection signal="timeout" from="Hide_Dialogs" to="." method="_on_Hide_Dialogs_timeout"]
 [connection signal="body_entered" from="Buro2" to="." method="_on_Buro2_body_entered"]
