@@ -78,7 +78,7 @@ shape = SubResource( 2 )
 
 [node name="Steps_SoundEffect" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 10 )
-volume_db = 20.0
+volume_db = 24.0
 
 [node name="Shoot_SoundEffect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
