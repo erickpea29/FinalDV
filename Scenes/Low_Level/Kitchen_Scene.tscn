@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/Scenes_BackGrounds/Kitchen.jpeg" type="Texture" id=1]
 [ext_resource path="res://Scenes/Characters/Main_Character_Animation.tscn" type="PackedScene" id=2]
@@ -23,6 +23,11 @@ extents = Vector2( 519.156, 7.94287 )
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 3.51978, 285.957 )
+
+[sub_resource type="CapsuleShape2D" id=7]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 53.7492, 5.42453 )
 
 [node name="Kitchen_Scene" type="Node2D"]
 script = ExtResource( 5 )
@@ -75,7 +80,7 @@ position = Vector2( 514.774, 19.799 )
 shape = SubResource( 6 )
 
 [node name="Main_Character_Animation" parent="." instance=ExtResource( 2 )]
-position = Vector2( 685.956, 306.107 )
+position = Vector2( 729.682, 159.791 )
 
 [node name="Portal" parent="." instance=ExtResource( 3 )]
 position = Vector2( 122.805, -72.0813 )
@@ -88,3 +93,36 @@ next_scene_path = "res://Scenes/Low_Level/Basement_Scene.tscn"
 player_spawn_location = Vector2( 492, 420 )
 
 [node name="Lives" parent="." instance=ExtResource( 4 )]
+
+[node name="Dialog" type="Label" parent="."]
+margin_left = 510.225
+margin_top = 486.754
+margin_right = 759.225
+margin_bottom = 585.754
+text = "I have no time for have a snak."
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Table" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
+position = Vector2( 282.541, 450.72 )
+shape = SubResource( 7 )
+
+[node name="Show_Dialogs" type="Timer" parent="."]
+wait_time = 1.2
+one_shot = true
+
+[node name="Stove" type="Area2D" parent="."]
+position = Vector2( -153.043, 30.2722 )
+scale = Vector2( 1.022, 0.99172 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stove"]
+position = Vector2( 393.052, 208.542 )
+shape = SubResource( 8 )
+[connection signal="body_entered" from="Table" to="." method="_on_Table_body_entered"]
+[connection signal="body_entered" from="Stove" to="." method="_on_Stove_body_entered"]
