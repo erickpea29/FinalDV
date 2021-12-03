@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Scenes_BackGrounds/Room.jpeg" type="Texture" id=2]
@@ -10,9 +10,6 @@
 extents = Vector2( 63.7143, 10 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 1.52705 )
-
-[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 1.65857, 100.993 )
 
 [node name="Room_Scene" type="Node2D"]
@@ -74,18 +71,11 @@ shape = SubResource( 1 )
 wait_time = 1.2
 one_shot = true
 
-[node name="Buro" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Buro"]
-position = Vector2( 662.476, 223.9 )
-shape = SubResource( 2 )
-
 [node name="Buro2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buro2"]
 position = Vector2( 191.13, 317.865 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 [connection signal="body_entered" from="Window" to="." method="_on_Window_body_entered"]
 [connection signal="timeout" from="Hide_Dialogs" to="." method="_on_Hide_Dialogs_timeout"]
-[connection signal="body_entered" from="Buro" to="." method="_on_Buro_body_entered"]
 [connection signal="body_entered" from="Buro2" to="." method="_on_Buro2_body_entered"]

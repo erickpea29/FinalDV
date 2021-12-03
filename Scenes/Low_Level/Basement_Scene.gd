@@ -13,3 +13,4 @@ func _on_gun_body_entered(body):
 func _on_Hide_Dialog_timeout():
 	$Dialog.hide()
 	$gun.queue_free()
+	$Gun.queue_free()

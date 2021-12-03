@@ -12,4 +12,5 @@ func _sound():
 		self.hide()
 
 func _on_Timer_timeout():
+	$AudioStreamPlayer.volume_db = -180
 	self.queue_free()
