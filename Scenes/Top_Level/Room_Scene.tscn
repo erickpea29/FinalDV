@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Scenes_BackGrounds/Room.jpeg" type="Texture" id=2]
+[ext_resource path="res://Assets/Scenes_BackGrounds/Room.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/Characters/Main_Character_Animation.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Lives.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Top_Level/Room_Scene.gd" type="Script" id=5]
@@ -27,7 +27,7 @@ scale = Vector2( 0.973275, 1 )
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Room_Objects"]
 position = Vector2( -525.88, -302 )
 scale = Vector2( 1.02746, 1 )
-polygon = PoolVector2Array( 195.487, 443.283, 195.487, 463.171, 196.055, 483.013, 312.27, 483.131, 312.27, 472.985, 321.826, 473.221, 322.313, 522.89, 341.117, 522.89, 341.117, 513.31, 380.678, 513.31, 380.501, 603.254, 380.206, 599.668, 644.159, 599.983, 643.25, 563.25, 632.5, 563.5, 633.75, 513, 662.5, 513, 667.453, 462.27, 670.81, 462.416, 678.226, 459.238, 685.642, 458.178, 688.821, 457.119, 694.118, 458.178, 701.75, 474, 720.5, 473.5, 721.25, 483.5, 857.75, 483.25, 857.5, 443, 886.5, 443.25, 886.75, 433, 906, 433.25, 907.172, 426.7, 915.19, 426.7, 915.427, 442.559, 935.695, 443.004, 935.473, 432.982, 954.404, 433.427, 954.627, 383.314, 1023.47, 424.445, 1023.94, 604.254, 0.783127, 602.838, 1.727, 451.818, 1.25507, 448.514 )
+polygon = PoolVector2Array( 195.487, 443.283, 195.487, 463.171, 196.055, 483.013, 312.27, 483.131, 312.27, 472.985, 321.826, 473.221, 322.313, 522.89, 341.117, 522.89, 341.117, 513.31, 380.678, 513.31, 380.501, 603.254, 380.206, 599.668, 644.159, 599.983, 732.786, 600.945, 731.287, 563.113, 722.297, 562.551, 721.736, 543.448, 712.559, 542.324, 712.371, 508.799, 711.809, 491.382, 711.809, 486.699, 711.997, 481.081, 712.559, 475.837, 711.809, 472.465, 720.5, 473.5, 721.25, 483.5, 857.75, 483.25, 857.5, 443, 886.5, 443.25, 886.75, 433, 906, 433.25, 907.172, 426.7, 915.19, 426.7, 915.427, 442.559, 935.695, 443.004, 935.473, 432.982, 954.404, 433.427, 954.627, 383.314, 1023.47, 424.445, 1023.94, 604.254, 0.783127, 602.838, 1.727, 451.818, 1.25507, 448.514 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Room_Objects"]
 position = Vector2( -525.88, -302 )
@@ -76,6 +76,7 @@ one_shot = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Buro2"]
 position = Vector2( 191.13, 317.865 )
 shape = SubResource( 2 )
+
 [connection signal="body_entered" from="Window" to="." method="_on_Window_body_entered"]
 [connection signal="timeout" from="Hide_Dialogs" to="." method="_on_Hide_Dialogs_timeout"]
 [connection signal="body_entered" from="Buro2" to="." method="_on_Buro2_body_entered"]
