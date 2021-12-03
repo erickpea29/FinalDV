@@ -6,7 +6,7 @@ const MySmokeResource = preload("res://Assets/enemy/Enemy.tscn")
 func _ready():
 	$Dialog.hide()
 	if Global.bul == false: 
-		print("Hola")
+		print("Llave")
 		#Make instance
 		var GrabedInstance= MySmokeResource.instance()
 		#Attach it to the tree
