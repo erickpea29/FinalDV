@@ -2,6 +2,8 @@ extends KinematicBody2D
 
 var Main_Character_Animation = null
 var move = Vector2.ZERO
+var lives = 2
+
 
 
 func _physics_process(delta):
@@ -34,3 +36,9 @@ func _on_Area2D_body_exited(body):
 
 func _on_Area2D2_body_entered(body):
 	Livescounter.lives -= 1
+
+
+func _on_Area2D3_body_entered(body):
+	lives -= 1
+	if lives == 0:
+		self.queue_free()

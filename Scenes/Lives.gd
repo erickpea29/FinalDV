@@ -9,6 +9,6 @@ func _physics_process(delta):
 	if Livescounter.lives == 1:
 		$Live2.hide()
 	if Livescounter.lives == 0:
-		get_tree().reload_current_scene()
+		get_tree().change_scene("res://Scenes/Died_scene/Died_scene.tscn")
 		
 

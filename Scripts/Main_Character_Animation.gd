@@ -47,6 +47,7 @@ func get_input():
 			#Verificamos que tenga arma y que se haya presionado F (disparo)
 			if Input.is_action_just_pressed("Shoot"):
 				$Player.animation = "Main_Character_Shooting"
+				
 				shoot() #Funcion que genera la bala y realiza el disparo
 		else:
 			$Player.animation = "Main_Character_Idle" #Sprite del personaje cuando está quieto y no tiene arma
@@ -57,6 +58,7 @@ func get_input():
 #Funcion para generar la bala y animar el disparo del arma del personaje
 func shoot():
 	var bala = dispara_bala.instance() #Instanciamos la bala
+	$AudioStreamPlayer.play()
 	if($Player.flip_h == true):
 		bala.inicio($Player/Gun_Flipped.global_position, dir)
 	else:
