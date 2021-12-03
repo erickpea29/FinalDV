@@ -24,7 +24,8 @@ extents = Vector2( 519.156, 7.94287 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 3.51978, 285.957 )
 
-[sub_resource type="CapsuleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 54.9366, 1.1344 )
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 53.7492, 5.42453 )
@@ -110,7 +111,7 @@ __meta__ = {
 [node name="Table" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table"]
-position = Vector2( 282.541, 450.72 )
+position = Vector2( 327.568, 439.066 )
 shape = SubResource( 7 )
 
 [node name="Show_Dialogs" type="Timer" parent="."]
@@ -125,4 +126,5 @@ scale = Vector2( 1.022, 0.99172 )
 position = Vector2( 393.052, 208.542 )
 shape = SubResource( 8 )
 [connection signal="body_entered" from="Table" to="." method="_on_Table_body_entered"]
+[connection signal="timeout" from="Show_Dialogs" to="." method="_on_Show_Dialogs_timeout"]
 [connection signal="body_entered" from="Stove" to="." method="_on_Stove_body_entered"]

@@ -27,3 +27,6 @@ func _on_Buro2_body_entered(body):
 	$Dialog.text = str("Just another buro.")
 	$Dialog.show()
 	$Hide_Dialogs.start()
+
+func _on_Hide_Dialogs_timeout():
+	$Dialog.hide()

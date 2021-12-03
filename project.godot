@@ -10,12 +10,13 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
+
 }
 
 [application]
 
 config/name="ProyectoFinal_DV"
-run/main_scene="res://Scenes/Game_Intro/Intro_WoWGames.tscn"
+run/main_scene="res://Scenes/Game_Intro/Main_Intro_WoWGames.tscn"
 config/icon="res://icon.png"
 
 [autoload]
