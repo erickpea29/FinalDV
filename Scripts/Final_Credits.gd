@@ -14,19 +14,11 @@ func _on_Show_Labels_timeout():
 	$Sound_Background.play()
 	$Message.show()
 
-
 func _on_Show_CommingSoon_timeout():
 	$Seasson2.show()
 
-
 func _on_Show_Controls_timeout():
 	$Control.show()
-
-
-func _on_Main_Menu_pressed():
-	get_tree().change_scene("res://Scenes/Game_Intro/Menu.tscn")
-	$".".queue_free()
-
 
 func _on_Quit_pressed():
 	get_tree().quit()

@@ -7,6 +7,9 @@
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
 margin_right = 1022.0
@@ -16,5 +19,4 @@ autoplay = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
